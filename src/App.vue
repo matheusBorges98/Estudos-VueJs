@@ -4,7 +4,7 @@
     <input type="text" v-model="clienteVictor.nome">
    
     <div v-for="cliente in clientes" :key="cliente.id">
-      <h4>{{index}}</h4>
+     
       <Cliente :cliente="cliente"/>
       <hr>
       <h4>Edição:</h4>

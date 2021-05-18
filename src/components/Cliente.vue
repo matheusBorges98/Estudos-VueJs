@@ -9,7 +9,7 @@
 
         <p v-show="mostraIdade === true">idade: {{cliente.idade}}</p>
 
-       <!-- <button @click="">Mudar cor</button>-->
+        <button @click="mudarCor($event)">Mudar cor</button>
 
         <!--<input type="text" v-model="nome"> Two way data binding
         <hr>
@@ -32,6 +32,12 @@ export default {
     props:{ 
        cliente      : Object,
        mostraIdade  : Boolean,
+    },
+    methods:{
+        mudarCor: function($event){
+            console.log($event);
+            this.isPremium = !this.isPremium;
+        }
     }
 }
 </script>
